@@ -19,6 +19,20 @@
         darwinConfigurations."HOSTNAME" = nix-darwin.lib.darwinSystem {
             system = "aarch64.darwin";
             modules = [
+								./hosts/macbook-neo/default.nix
+								./users/sfaye/default.nix
+								./users/sfaye/packages.nix
+								./users/sfaye/home.nix
+								./profiles/base.nix
+								# ./modules/common/XXXX
+								./modules/darwin/default.nix
+								./modules/darwin/homebrew.nix
+								./modules/darwin/security.nix
+								./modules/home/desktop/gpg.nix
+								./modules/home/desktop/ssh.git
+								./modules/home/development/git.nix
+								./modules/home/shell/fish.nix
+								./modules/home/terminal/alacritty.nix
                 home-manager.darwinModules.home-manager 
                 {
                     home-manager = {
